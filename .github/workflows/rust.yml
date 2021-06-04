@@ -18,3 +18,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run:  cargo new hello_world --bin
+      
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage
+        path: ./*
+        retention-days: 1
