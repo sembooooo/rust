@@ -18,8 +18,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       working-directory: ./hello_world
-      run:  cargo build
-      
-    - name: Execute
-      working-directory: ./hello_world
-      run:  ./main
+      run:  cargo run
