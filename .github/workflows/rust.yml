@@ -17,6 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run:  cargo build hello_world
+      working-directory: ./hello_world
+      run:  cargo build
+      
     - name: Execute
+      working-directory: ./hello_world
       run:  ./main
